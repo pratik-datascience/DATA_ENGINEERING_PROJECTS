@@ -1,5 +1,5 @@
 {
-	"name": "DelimitedText2PL1",
+	"name": "DelimitedText1PL2",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "AzureDataLakeStoragePL1",
@@ -10,6 +10,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
+				"fileName": "empdata.csv",
 				"folderPath": "csv",
 				"fileSystem": "input"
 			},
