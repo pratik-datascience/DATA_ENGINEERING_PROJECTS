@@ -1,0 +1,27 @@
+{
+	"name": "LS_Sink_PL1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDataLakeStoragePL1",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"fileName": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": {
+					"value": "@dataset().fileName",
+					"type": "Expression"
+				},
+				"fileSystem": "output"
+			}
+		},
+		"schema": {}
+	}
+}
